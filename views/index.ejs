@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="Aakash Dahiya (2).png" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My to do list</title>
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <style>
+      input:checked + p {
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="a3-containers">
+      <div class="a1st"><%- include("partials/header.ejs") %></div>
+      <div class="a2nd">
+        <div class="form-container">
+          <h2 class="date">
+            <% const date = new Date(); let day = date.getDate(); let month =
+            date.getMonth() + 1; let year = date.getFullYear(); currentDate =
+            `${day}-${month}-${year}`; %> <%= currentDate %>
+          </h2>
+          <form action="/submit" method="post">
+            <input
+              class="task-field"
+              type="text"
+              name="task"
+              placeholder="Enter your task"
+              id="taskInput"
+              required
+            />
+            <button class="submit-button" type="submit">+</button>
+          </form>
+          <div class="task-list">
+            <ul>
+              <% for (let i = 0; i < taskList.length; i++) { %>
+              <li>
+                <input type="checkbox" />
+                <p class="task-text"><%= taskList[i] %></p>
+              </li>
+              <% } %>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="a3rd"><%- include("partials/footer.ejs") %></div>
+    </div>
+
+    <script src="clientSide.js"></script>
+  </body>
+</html>

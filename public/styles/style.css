@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  color: black;
+  background-color: burlywood;
+}
+h1 {
+  font-family: "Black Ops One", cursive;
+  text-transform: uppercase;
+}
+.a3-containers {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  align-items: center;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+.header img {
+  height: 100px;
+  width: 200px;
+  object-fit: cover;
+}
+.header h1 {
+  color: #1c222e;
+  font-size: 2.3em;
+}
+
+.form-container {
+  font-family: sans-serif;
+  border-radius: 10px;
+  max-width: 500px;
+  height: 400px;
+  border: 2px solid black;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+}
+
+.date {
+  font-size: 30px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  color: white;
+  background-color: black;
+  width: 100%;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+.task-field {
+  height: 30px;
+
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border-radius: 2px;
+  width: 13em;
+  border: none;
+  margin-right: 10px;
+}
+
+.submit-button {
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.task-list {
+  border: 1px solid black;
+  height: 150px;
+  overflow-y: auto;
+  overflow-x: auto;
+  position: absolute;
+  left: 60px;
+  top: 150px;
+}
+.task-list li {
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
+  gap: 30px;
+}
+
+.footer {
+  width: 100%;
+  align-items: center;
+  background-color: white;
+  display: flex;
+  /* position: absolute;
+  bottom: 0; */
+  justify-content: space-evenly;
+  padding: 20px 0;
+}
+
+#reset-button {
+  border: none;
+  background-color: tan;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
